@@ -1,5 +1,5 @@
 =begin
-    Very basics
+    Basics
     This is a multi-line comment
 =end
 
@@ -9,8 +9,8 @@ blockReward = 3.125          # Float
 name = "Satoshi Nakamoto"    # String
 isRevolution = true          # Boolean
 
-# Output (no breakline)
+# Output using "print"
 print nCoins
 
-# Output with break line
+# Output using "puts" (adds a break line)
 puts name

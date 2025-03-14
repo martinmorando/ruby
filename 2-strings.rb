@@ -2,11 +2,11 @@
     Strings
 =end
 
+# Declare and assign variable
 name = "Satoshi Nakamoto"
-n = 21000000
 
 # Output interpolated strings
-puts "The name is #{name}. The number is #{n}."
+puts "The name is #{name}."
 
 # Output the string length
 # What follows after the dot is the method. Remember: everything is an object in Ruby
