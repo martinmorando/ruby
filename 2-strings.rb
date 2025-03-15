@@ -2,8 +2,10 @@
     Strings
 =end
 
-# Declare and assign variable
+# Declare and assign a string variable
+# Single or double quotation marks are valid
 name = "Satoshi Nakamoto"
+message = 'Bitcoin: A Peer-to-Peer Electronic Cash System'
 
 # Output interpolated strings
 puts "The name is #{name}."
@@ -30,3 +32,9 @@ name.reverse!
 
 # Output name, which has been reversed
 puts name
+
+# Remove new line (\n) character
+annoyingString = "Hercules\n"
+puts "Before chomp: '#{annoyingString}'"
+annoyingString.chomp!
+puts "After chomp: '#{annoyingString}'"
