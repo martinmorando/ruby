@@ -33,6 +33,10 @@ name.reverse!
 # Output name, which has been reversed
 puts name
 
+# Split
+sentence = "Hello, everyone, today"
+words = sentence.split(", ")       # ["Hello", "everyone", "today"]
+
 # Remove new line (\n) character
 annoyingString = "Hercules\n"
 puts "Before chomp: '#{annoyingString}'"

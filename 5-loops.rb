@@ -40,3 +40,26 @@ loop do
     i += 1
     break if i == 11
 end
+
+
+
+# [.times iterator]
+3.times { puts ".times" }
+
+
+
+# [Iterate over an object]
+arr = [1, 2, 3, 4, 5]
+
+# - Alternative A
+arr.each do |item|      # item is a placeholder
+    puts "object.each (A): #{item}"
+end
+
+# - Alternative B
+arr.each { |item|
+    puts "object.each (B): #{item}"
+}
+
+# - Alternative C
+arr.each { |item| puts "object.each (C): #{item}" }
