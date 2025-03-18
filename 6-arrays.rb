@@ -1,5 +1,6 @@
 =begin
     Arrays
+    - Ordered collection of elements, each one accessible by its index (0-based)
 =end
 
 # [One-dimensional arrays]
