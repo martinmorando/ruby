@@ -35,8 +35,14 @@ f = a >= 1  # true
 g = a < 1   # false
 h = a <= 1  # false
 
+# "<=>": known as "three-way comparison" operator. AKA "spaceship operator"
+# a <=> b, returns:
+#   1 if a > b
+#   0 if a == b
+#  -1 if a < b
+i = 4 <=> 3     # 1
 
 # Boolean operators: &&, ||, ! 
-i = !(2+2 == 4)             # false
-j = (2+2 == 4) && (2+1 > 3) # false 
-k = (2+2 == 4) || (2+1 > 3) # true
+j = !(2+2 == 4)             # false
+k = (2+2 == 4) && (2+1 > 3) # false 
+l = (2+2 == 4) || (2+1 > 3) # true
