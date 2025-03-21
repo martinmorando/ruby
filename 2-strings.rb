@@ -42,3 +42,12 @@ annoyingString = "Hercules\n"
 puts "Before chomp: '#{annoyingString}'"
 annoyingString.chomp!
 puts "After chomp: '#{annoyingString}'"
+
+# Check if there's a substring inside string
+if sentence.include? "every"
+    puts "Yes, it's included."
+end
+
+# Replace substring (gsub: global substitution)
+sentence.gsub!(/everyone/, "Satoshi")
+puts sentence
