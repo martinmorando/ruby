@@ -5,7 +5,7 @@
 a = 1
 b = 2
 
-# Conditional
+# If
 if a > b
     puts "a > b"
 elsif a < b
@@ -13,6 +13,15 @@ elsif a < b
 else
 	puts "a == b"
 end
+
+
+# One-line if (notice no "end")
+puts "a < b" if a < b 
+
+
+# Ternary operator
+c = false
+puts c ? "c is true" : "c is false"
 
 
 # Unless: executes code if condition is false
