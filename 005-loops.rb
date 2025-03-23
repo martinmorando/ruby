@@ -31,6 +31,9 @@ until i == 11
     i += 1
 end
 
+# One-line until (notice no "end")
+puts "YES" unless 2 > 3
+
 
 
 # [Loop do]
