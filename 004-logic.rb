@@ -24,6 +24,17 @@ c = false
 puts c ? "c is true" : "c is false"
 
 
+# Case statement
+case b
+    when 0
+        puts "b is 0"
+    when 1
+        puts "b is 1"
+    else
+        puts "b is not 0 nor 1"
+end
+
+
 # Unless: executes code if condition is false
 unless a == 2
     puts "a is not 2"
