@@ -55,3 +55,10 @@ d = c.sort_by do |key,value|
 end.to_h                        # Convert sorted array (array of arrays) to a hash
 
 puts d                          # {"A"=>123, "E"=>212, "B"=>342}
+
+
+# [DELETE]
+# - Delete by key
+d.delete("A")
+
+puts                            # {"E"=>212, "B"=>342}
