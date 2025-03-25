@@ -5,7 +5,7 @@
 a = 1
 b = 2
 
-# If
+# [IF]
 if a > b
     puts "a > b"
 elsif a < b
@@ -14,17 +14,16 @@ else
 	puts "a == b"
 end
 
-
 # One-line if (notice no "end")
 puts "a < b" if a < b 
-
 
 # Ternary operator
 c = false
 puts c ? "c is true" : "c is false"
 
 
-# Case statement
+
+# [CASE STATEMENT]
 case b
     when 0
         puts "b is 0"
@@ -35,19 +34,20 @@ case b
 end
 
 
-# Unless: executes code if condition is false
+
+# [UNLESS]: executes code if condition is false
 unless a == 2
     puts "a is not 2"
 else
     puts "a is 2"
 end
 
-
 # Unless: shorthand syntax
 puts "The condition evaluated is false" unless b == 4 
 
 
-# Comparison operators
+
+# [COMPARISON OPERATORS]
 c = a == 1  # true
 d = a != 1  # false
 e = a > 1   # false
@@ -62,7 +62,17 @@ h = a <= 1  # false
 #  -1 if a < b
 i = 4 <=> 3     # 1
 
-# Boolean operators: &&, ||, ! 
+
+
+# [BOOLEAN OPERATORS]: &&, ||, ! 
 j = !(2+2 == 4)             # false
 k = (2+2 == 4) && (2+1 > 3) # false 
 l = (2+2 == 4) || (2+1 > 3) # true
+
+
+
+# [OTHER LOGICAL OPERATORS]
+# - Conditional assignment: assigns to variable only if it hasn't been assigned
+name = "Dexter"
+name ||= "Martha"
+puts name                   # Output: Dexter
