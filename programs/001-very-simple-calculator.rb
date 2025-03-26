@@ -3,8 +3,7 @@
     Very Simple Calculator (work in progress)
 
     To do:
-        - Validate input
-        - Loop until valid a option is selected
+        - Ask for n1, n2 until valid n1, n2 are provided
         - Merge addition and subtraction?
 
     Ideas:
@@ -17,6 +16,13 @@
 
 
 # [HELPER FUNCTIONS]
+
+# Print welcome
+def print_intro()
+    puts "--------------------------------------------"
+    puts "-----------VERY SIMPLE CALCULATOR-----------"
+    puts "--------------------------------------------"
+end
 
 # Prompts user for 2 numbers, and returns array with floats
 def prompt_user()
@@ -33,49 +39,65 @@ def print_result(result)
 end
 
 
-puts "--------------------------------------------"
-puts "-----------VERY SIMPLE CALCULATOR-----------"
-puts "--------------------------------------------"
-puts "Select operation:"
-puts "  [1] Addition"
-puts "  [2] Subtraction"
-puts "  [3] Multiplication"
-puts "  [4] Division"
 
-user_operation = gets.chomp
+# [MAIN FUNCTION]
+def start()
 
-case user_operation.to_i
-    when 1
-        numbers = prompt_user()
-        result = numbers[0] + numbers[1]
-        print_result(result)
+    # Display welcome
+    print_intro()
 
-    when 2
-        numbers = prompt_user()
-        result = numbers[0] - numbers[1]
-        print_result(result)
+    # Define accepted operations and initialize user_operation
+    accepted_operations = [1, 2, 3, 4]
+    user_operation = nil
 
-    when 3
-        numbers = prompt_user()
-        result = numbers[0] * numbers[1]
-        print_result(result)
+    # Loop until a valid operation is selected
+    # As long as this is false, continues iterating
+    until accepted_operations.include?(user_operation.to_i)
+        puts "Select operation:"
+        puts "  [1] Addition"
+        puts "  [2] Subtraction"
+        puts "  [3] Multiplication"
+        puts "  [4] Division"
+    
+        # Receive input from user
+        user_operation = gets.chomp
 
-    when 4
-        numbers = prompt_user()
-
-        # Handle division by 0
-        if numbers[1] == 0
-            puts "Can't divide by 0"
-            return 0
+        # If input is invalid, inform user
+        if !accepted_operations.include?(user_operation.to_i)
+            puts "Invalid operation. Try again."
         end
+    end # End until
 
-        result = numbers[0] / numbers[1]
-        print_result(result)
+    # Valid operation selected
+    # Ask the user to enter 2 numbers
+    numbers = prompt_user()
 
-    when 21000000
-        puts "You are awake, Neo..."
+    # Check what operation the user wants to execute
+    case user_operation.to_i
+        when 1
+            # Addition
+            result = numbers[0] + numbers[1]
+        when 2
+            # Subtraction
+            result = numbers[0] - numbers[1]
+        when 3
+            # Multiplication
+            result = numbers[0] * numbers[1]
+        when 4 
+            # Division
+            # Handle division by 0
+            if numbers[1] == 0
+                puts "Can't divide by 0"
+                return 0
+            end
+            result = numbers[0] / numbers[1]
+    end # End case
 
-    else
-        puts "Invalid option. Goodbye!"
+    # Print result of the operation
+    print_result(result)
 
 end
+
+
+# Start main function
+start()
