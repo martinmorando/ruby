@@ -5,7 +5,6 @@
     To do:
         - Validate input
         - Loop until valid a option is selected
-        - Handle division by 0
         - Merge addition and subtraction?
 
     Ideas:
@@ -63,6 +62,13 @@ case user_operation.to_i
 
     when 4
         numbers = prompt_user()
+
+        # Handle division by 0
+        if numbers[1] == 0
+            puts "Can't divide by 0"
+            return 0
+        end
+
         result = numbers[0] / numbers[1]
         print_result(result)
 
