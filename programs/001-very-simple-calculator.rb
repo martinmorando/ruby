@@ -7,7 +7,6 @@
         - Loop until valid a option is selected
         - Handle division by 0
         - Merge addition and subtraction?
-        - Use a function to print result 
 
     Ideas:
         - Allow the user to define the rounding error
@@ -29,7 +28,10 @@ def prompt_user()
     return [n1.round(2), n2.round(2)]   # Round
 end 
 
-
+# Print result formatted
+def print_result(result)
+    puts "Result: #{result.round(2)}"
+end
 
 
 puts "--------------------------------------------"
@@ -47,22 +49,22 @@ case user_operation.to_i
     when 1
         numbers = prompt_user()
         result = numbers[0] + numbers[1]
-        puts "Result: #{result.round(2)}"
+        print_result(result)
 
     when 2
         numbers = prompt_user()
         result = numbers[0] - numbers[1]
-        puts "Result: #{result.round(2)}"
+        print_result(result)
 
     when 3
         numbers = prompt_user()
         result = numbers[0] * numbers[1]
-        puts "Result: #{result.round(2)}"
+        print_result(result)
 
     when 4
         numbers = prompt_user()
         result = numbers[0] / numbers[1]
-        puts "Result: #{result.round(2)}"
+        print_result(result)
 
     when 21000000
         puts "You are awake, Neo..."
