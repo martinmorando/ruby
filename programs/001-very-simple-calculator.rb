@@ -26,16 +26,17 @@ end
 
 # Prompts user for 2 numbers, and returns array with floats
 def prompt_user()
-    puts "Enter number:"
+    print " Enter number #1: "
     n1 = gets.chomp.to_f                # Convert to float
-    puts "Enter number:"
+    print " Enter number #2: "
     n2 = gets.chomp.to_f                # Convert to float
     return [n1.round(2), n2.round(2)]   # Round
 end 
 
 # Print result formatted
 def print_result(result)
-    puts "Result: #{result.round(2)}"
+    puts ""
+    puts "          Result: #{result.round(2)}"
 end
 
 
@@ -53,11 +54,13 @@ def start()
     # Loop until a valid operation is selected
     # As long as this is false, continues iterating
     until accepted_operations.include?(user_operation)
-        puts "Select operation:"
-        puts "  [1] Addition"
-        puts "  [2] Subtraction"
-        puts "  [3] Multiplication"
-        puts "  [4] Division"
+        puts "Available operations:"
+        puts " [1] Addition"
+        puts " [2] Subtraction"
+        puts " [3] Multiplication"
+        puts " [4] Division"
+        puts ""
+        print "Select operation: "
     
         # Receive input from user
         user_operation = gets.chomp.to_i
