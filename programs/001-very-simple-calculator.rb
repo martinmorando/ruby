@@ -52,7 +52,7 @@ def start()
 
     # Loop until a valid operation is selected
     # As long as this is false, continues iterating
-    until accepted_operations.include?(user_operation.to_i)
+    until accepted_operations.include?(user_operation)
         puts "Select operation:"
         puts "  [1] Addition"
         puts "  [2] Subtraction"
@@ -60,10 +60,10 @@ def start()
         puts "  [4] Division"
     
         # Receive input from user
-        user_operation = gets.chomp
+        user_operation = gets.chomp.to_i
 
         # If input is invalid, inform user
-        if !accepted_operations.include?(user_operation.to_i)
+        if !accepted_operations.include?(user_operation)
             puts "Invalid operation. Try again."
         end
     end # End until
