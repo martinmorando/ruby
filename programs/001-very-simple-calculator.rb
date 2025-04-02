@@ -4,7 +4,6 @@
 
     To do:
         - Ask for n1, n2 until valid n1, n2 are provided
-        - Merge addition and subtraction?
 
     Ideas:
         - Allow the user to define the rounding error
@@ -48,17 +47,16 @@ def start()
     print_intro()
 
     # Define accepted operations and initialize user_operation
-    accepted_operations = [1, 2, 3, 4]
+    accepted_operations = [1, 2, 3]
     user_operation = nil
 
     # Loop until a valid operation is selected
     # As long as this is false, continues iterating
     until accepted_operations.include?(user_operation)
         puts "Available operations:"
-        puts " [1] Addition"
-        puts " [2] Subtraction"
-        puts " [3] Multiplication"
-        puts " [4] Division"
+        puts " [1] Addition / Subtraction"
+        puts " [2] Multiplication"
+        puts " [3] Division"
         puts ""
         print "Select operation: "
     
@@ -78,15 +76,12 @@ def start()
     # Check what operation the user wants to execute
     case user_operation.to_i
         when 1
-            # Addition
+            # Addition / Subtraction
             result = numbers[0] + numbers[1]
         when 2
-            # Subtraction
-            result = numbers[0] - numbers[1]
-        when 3
             # Multiplication
             result = numbers[0] * numbers[1]
-        when 4 
+        when 3
             # Division
             # Handle division by 0
             if numbers[1] == 0
